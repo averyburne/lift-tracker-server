@@ -1,4 +1,4 @@
-class LiftsController < ProtectedController
+class LiftsController < OpenReadController
   before_action :set_lift, only: [:show, :update, :destroy]
 
   # GET /lifts
