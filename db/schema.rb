@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2020_02_21_185555) do
   end
 
   create_table "lifts", force: :cascade do |t|
-    t.string "type", null: false
+    t.string "exercise", null: false
     t.integer "weight", null: false
     t.integer "reps", null: false
     t.bigint "user_id"

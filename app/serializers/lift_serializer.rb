@@ -1,4 +1,4 @@
 class LiftSerializer < ActiveModel::Serializer
-  attributes :id, :type, :weight, :reps
+  attributes :id, :exercise, :weight, :reps
   has_one :user
 end

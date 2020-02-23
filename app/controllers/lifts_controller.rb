@@ -46,6 +46,6 @@ class LiftsController < ProtectedController
 
     # Only allow a trusted parameter "white list" through.
     def lift_params
-      params.require(:lift).permit(:type, :weight, :reps, :user_id)
+      params.require(:lift).permit(:exercise, :weight, :reps, :user_id)
     end
 end
