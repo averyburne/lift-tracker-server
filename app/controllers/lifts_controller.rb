@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class LiftsController < OpenReadController
-  before_action :set_lift, only: [:show, :update, :destroy]
+  before_action :set_lift, only: %i[show update destroy]
 
   # GET /lifts
   def index
@@ -39,13 +41,14 @@ class LiftsController < OpenReadController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_lift
-      @lift = current_user.lifts.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def lift_params
-      params.require(:lift).permit(:exercise, :weight, :reps, :user_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_lift
+    @lift = current_user.lifts.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def lift_params
+    params.require(:lift).permit(:exercise, :weight, :reps, :user_id)
+  end
 end
