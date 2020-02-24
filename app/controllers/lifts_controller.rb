@@ -4,7 +4,7 @@ class LiftsController < OpenReadController
   # GET /lifts
   def index
     @lifts = Lift.all
-
+    # @lift = Lift.where(:user_id => current_user.id)
     render json: @lifts
   end
 
