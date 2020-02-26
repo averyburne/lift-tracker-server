@@ -1,13 +1,14 @@
 # frozen_string_literal: true
 
-class LiftsController < OpenReadController
+class LiftsController < ProtectedController
   before_action :set_lift, only: %i[show update destroy]
 
   # GET /lifts
   def index
-    @lifts = Lift.all
+    # @lifts = Lift.all
+    @lifts2 = Lift.where(user_id: current_user.id)
     # @lift = Lift.where(:user_id => current_user.id)
-    render json: @lifts
+    render json: @lifts2
   end
 
   # GET /lifts/1
