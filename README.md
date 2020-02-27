@@ -14,6 +14,10 @@ online. I had to first make an account with Heroku and then setup the database's
 schema before migrating it over to Heroku. I also had to set up the client origin
 to my front end applicaiton.
 
+### Entity Relationship Diagram
+
+[ERD](https://imgur.com/gallery/ji5mOm8)
+
 ### Scaffolding the database
 
 The database was creating using Ruby on Rails, a simple generate scaffold command
