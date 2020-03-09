@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get '/lifts' => 'lifts#index'
   # Show:
   get '/lifts/:id' => 'lifts#show'
+  # Average:
+  get '/lifts-average' => 'lifts#average'
   # Create:
   post '/lifts' => 'lifts#create'
   # Update:

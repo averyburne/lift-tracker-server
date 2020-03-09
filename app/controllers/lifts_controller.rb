@@ -11,6 +11,41 @@ class LiftsController < ProtectedController
     render json: @lifts2
   end
 
+  # def average
+  #   @lifts = Lift.all
+  #   @lifts2 = @lifts.group_by { |item| item[:user_id] }
+  #   @lifts3 = []
+  #   @lifts2.each_value do |value|
+  #     @lifts3.push(value.group_by { |i| i[:exercise]})
+  #   end
+  #   @lifts4 = {}
+    # @lifts2.each_value do |value|
+      # sum = 0
+      # count = 0
+      # for item in value
+      #   if item.exercise == "Deadlift"
+      #     sum += item.weight
+      #     count += 1
+      #   else
+      #     sum += 0
+      #     count += 1
+      #   end
+      # end
+      # average = sum / count
+      # if average
+      # @lifts3.push(average)
+      # end
+    # @lifts3.each value do |value|
+    #   sum = 0
+    #   count = 0
+    #   for item in value
+    #
+    #   end
+    # end
+
+  #   render json: @lifts2
+  # end
+
   # GET /lifts/1
   def show
     render json: @lift
